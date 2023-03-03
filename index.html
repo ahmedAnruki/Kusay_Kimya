@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kusay Kimya</title>
+  <link rel="website icon" type="png" href="images/logo.png" />
+  <!-- link font awesome for icons -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <!-- link googel font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <!-- min link stylesheet -->
+  <link rel="stylesheet" href="css/min.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div>
+        <p>
+          <i class="fa-solid fa-location-dot"></i> Akershusstranda 20, 0150
+          Oslo, Norway
+        </p>
+        <p>
+          <i class="fa-regular fa-envelope"></i><a href="mailto:kusaykimya1@gmail.com"> kusaykimya1@gmail.com</a>
+        </p>
+      </div>
+      <ul>
+        <li>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <nav>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="" />
+          <p>Kusay Kimya</p>
+        </a>
+      </div>
+      <div class="bars" onclick="sohwNav()">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </div>
+      <div class="navbarNav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li class="News">
+            <a href="#">Languages <i class="fa-solid fa-chevron-down"></i></a>
+            <ul>
+              <li><a href="">English</a></li>
+              <li><a href="">Arabic</a></li>
+              <li><a href="">Turkish</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="hero-section" id="home">
+   <div class="slide-box">
+    <img src="images/slide/img-1.jpg" alt="img" class="active">
+    <img src="images/slide/img-2.jpg" alt="img">
+    <img src="images/slide/img-3.jpg" alt="img">
+   </div>
+
+    <div class="solid-aroows">
+      <i class="fa-solid fa-chevron-left" onclick="solidLeft()"></i>
+      <i class="fa-solid fa-chevron-right" onclick="solidRight()"></i>
+    </div>
+  </section>
+  <!-- <section class="welcome-section">
+    <div class="container">
+      <h1 class="title">Welcome to Kind Heart Charity</h1>
+      <div class="association">
+        <div class="box">
+          <a href="#">
+            <img src="images/icons/hands.png" alt="img">
+            <p>Become a <span>volunteer</span></p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="#">
+            <img src="images/icons/heart.png" alt="img">
+            <p><span>Caring</span> Earth</p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="#">
+            <img src="images/icons/receive.png" alt="img">
+            <p>Make a <span>Donation</span></p>
+          </a>
+        </div>
+        <div class="box">
+          <a href="#">
+            <img src="images/icons/scholarship.png" alt="img">
+            <p><span>Scholarship</span> Program</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="about" id="about">
+    <div class="title">About Us</div>
+    <div class="content">
+      <div class="imge">
+        <img src="images/about.jpg" alt="img" />
+      </div>
+      <div class="text">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi eaque
+          aliquid quibusdam vitae repellat aut officia saepe totam enim minima
+          harum obcaecati architecto, labore delectus nulla non error,
+          consequuntur sint.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="products" id="products">
+    <div class="title">Products</div>
+    <div class="products-boxs">
+      <div class="box">
+        <div class="imge">
+          <img src="images/products-imgs/_TDS_-_Endustriyel_-_WTR_CS_Cam_temizleme_urunu.png" alt="img" />
+        </div>
+        <div class="text">
+          <h3>product name</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, ratione.</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imge">
+          <img src="images/products-imgs/_TDS_-_Endustriyel_-_WTR_CS_Cam_temizleme_urunu.png" alt="img" />
+        </div>
+        <div class="text">
+          <h3>product name</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, ratione.</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imge">
+          <img src="images/products-imgs/_TDS_-_Endustriyel_-_WTR_CS_Cam_temizleme_urunu.png" alt="img" />
+        </div>
+        <div class="text">
+          <h3>product name</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, ratione.</p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="imge">
+          <img src="images/products-imgs/_TDS_-_Endustriyel_-_WTR_CS_Cam_temizleme_urunu.png" alt="img" />
+        </div>
+        <div class="text">
+          <h3>product name</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, ratione.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="title">Contact Us</div>
+    <div class="content">
+
+     <div class="info">
+        <div class="emal">
+          Contact us on the e-mail
+        <a href="mailto:kusaykimya1@gmail.com">
+          <i class="fa-regular fa-envelope"></i>
+          kusaykimya1@gmail.com
+        </a>
+        </div>
+        <div class="whats">
+          Contact us on WhatsApp
+          <a href="https://api.whatsapp.com/send?phone=905364981399" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            +90 536 498 13 99
+          </a>
+        </div>
+     </div>
+         <div class="icon">
+      <i class="fa-solid fa-flask-vial"></i>
+    </div>
+     <div class="social-media">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+     </div>
+</div>
+  </section>
+  <script src="js/min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,476 @@
+/* Start Global Rules */
+:root {
+  --white-color: #ffffff;
+  --primary-color: #F8D03F;
+  --secondary-color: #FDDA64;
+  --hover-color :#EBA900;
+  --dark-color: #2D2A26;
+  --p-color: #898A8D;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+}
+section .title {
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  opacity: 0.7;
+  color: var(--secondary-color);
+}
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+/* End Global Rules */
+
+/* Start Header & Nav Styling */
+header {
+  background: var(--dark-color);
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container > div {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+}
+
+header .container > div p {
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--white-color);
+}
+
+header .container > div p a {
+  color: var(--white-color);
+}
+
+header .container ul {
+  display: flex;
+  gap: 20px;
+}
+
+header .container ul li a {
+  color: var(--white-color);
+}
+
+@media (max-width: 767px) {
+  header .container ul {
+    display: none;
+  }
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: var(--white-color);
+  box-shadow: 0px 13px 20px 0px #00000035;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav .logo a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo a img {
+  width: 80px;
+}
+
+nav .logo a p {
+  color: var(--dark-color);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+nav .logo a p:hover {
+  color: var(--primary-color);
+}
+
+nav .navbarNav ul {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav .navbarNav ul li {
+  color: var(--p-color);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+nav .navbarNav ul li a:hover {
+  color: var(--primary-color);
+}
+
+nav .navbarNav ul li.News {
+  position: relative;
+}
+
+nav .navbarNav ul li.News ul {
+  width: 120px;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: var(--white-color);
+  padding: 10px;
+  box-shadow: 0px 0px 10px#00000030;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+nav .navbarNav ul li.News:hover ul {
+  display: flex;
+}
+
+nav .navbarNav ul li button {
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: transparent;
+  border: 2px solid var(--custom-btn-bg-color);
+}
+
+nav .navbarNav ul li button:hover {
+  background-color: var(--custom-btn-bg-hover-color);
+  border: 2px solid var(--custom-btn-bg-hover-color);
+  color: var(--white-color);
+}
+
+nav .bars {
+  display: none;
+}
+
+nav .bars i {
+  font-size: 30px;
+  color: var(--dark-color);
+  cursor: pointer;
+}
+
+/* End Header & Nav Styling */
+
+/* Start Sections Styling */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.hero-section .slide-box{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.hero-section .slide-box img{
+ display: none;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
+.hero-section .slide-box img.active{
+ display: block;
+}
+
+.hero-section .title {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 900px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: var(--white-color);
+  opacity: 1;
+  clip-path: polygon(100% 10%, 50% 50%, 100% 90%);
+}
+
+.hero-section .title h1 {
+  width: 50%;
+  font-size: 50px;
+  padding-right: 10px;
+  font-weight: bold;
+  color: var(--dark-color);
+  text-align: end;
+}
+
+.hero-section .solid-aroows {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.hero-section .solid-aroows i {
+  padding: 20px 24px;
+  margin: 20px;
+  font-size: 25px;
+  background-color: var(--dark-color);
+  color: var(--primary-color);
+  
+  border-radius: 50%;
+}
+
+.hero-section .solid-aroows i:hover {
+  color: var(--white-color);
+}
+
+.about{
+  background-color: var(--dark-color);
+}
+
+.about .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+}
+
+.about .imge {
+  max-width: 500px;
+  background-color: var(--primary-color);
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.about .imge img {
+  width: 100%;
+}
+.about .text {
+  max-width: 400px;
+  padding: 20px;
+}
+
+.about .content p {
+  line-height: 2;
+  color: var(--p-color);
+  font-size: 16px;
+}
+
+.products .products-boxs {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.products .products-boxs .box {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--dark-color);
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px#000000;
+
+}
+.products .products-boxs .box .imge {
+  width: 250px;
+  height: 250px;
+}
+.products .products-boxs .box .imge img{
+  width: 100%;
+  height: 100%;
+}
+
+.products .products-boxs .box .text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 200px;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  border: 5px solid var(--primary-color);
+  padding: 10px;
+}
+
+.products .products-boxs .box .text h3{
+  font-size: 25px;
+  color: var(--dark-color);
+}
+
+.products .products-boxs .box .text p{
+  margin-top: 50px;
+  color: var(--p-color);
+}
+
+
+.contact {
+  position: relative;
+  background-color: var(--dark-color);  
+}
+
+.contact .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+.contact .content .icon i{
+  font-size: 100px;
+  color: var(--primary-color);
+}
+.contact .content .info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contact .content .info .emal,
+.contact .content .info .whats{
+display: flex;
+flex-direction: column;
+gap: 10px;
+color: var(--white-color);
+font-size: 28px;
+}
+.contact .content .info .emal a,
+.contact .content .info .whats a {
+  font-size: 20px;
+  color: var(--p-color);
+}
+
+.contact .content .social-media{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact .content .social-media a i{
+  font-size: 30px;
+  color: var(--p-color);
+}
+
+.contact .content .info .emal a:hover,
+.contact .content .info .whats a:hover,
+.contact .content .social-media a i:hover{
+  color: var(--hover-color);
+}
+
+
+@media (max-width: 992px) {
+  header{
+   display: none;
+  }
+  nav .navbarNav {
+    flex: 100%;
+    display: none;
+    text-align: start;
+  }
+
+  nav .navbarNav.active {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-left: 20px;
+    background-color: var(--dark-color);
+    display: flex;
+  }
+
+  nav .navbarNav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  nav .bars {
+    display: block;
+  }
+
+  nav .navbarNav ul li.News ul{
+    background-color: var(--dark-color);
+    
+  }
+
+  .hero-section .title {
+    width: 500px;
+    height: 300px;
+  }
+  .hero-section .title h1{
+    font-size: 35px;
+  }
+}
